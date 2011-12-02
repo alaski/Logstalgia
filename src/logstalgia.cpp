@@ -741,11 +741,11 @@ RequestBall* Logstalgia::findNearest(Paddle* paddle, const std::string& paddle_t
         RequestBall* ball = *it;
 
         //special case if failed response code
-        if(!ball->le->successful) {
+        if(ball->le->successful) {
             continue;
         }
 
-        if(ball->le->successful && !ball->hasBounced()
+        if(!ball->le->successful && !ball->hasBounced()
             && (gPaddleMode <= PADDLE_SINGLE
                 || gPaddleMode == PADDLE_VHOST && ball->le->vhost == paddle_token
                 || gPaddleMode == PADDLE_PID   && ball->le->pid   == paddle_token

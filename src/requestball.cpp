@@ -47,7 +47,7 @@ RequestBall::RequestBall(LogEntry* le, FXFont* font, TextureResource* tex, const
     start = pos;
     this->dest  = finish();
 
-    if(!le->successful) dontBounce();
+    if(le->successful) dontBounce();
 
     float halfsize = size * 0.5f;
     offset = vec2f(halfsize, halfsize);
