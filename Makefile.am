@@ -4,6 +4,7 @@ bin_PROGRAMS = logstalgia
 
 logstalgia_SOURCES = \
 	src/ncsa.cpp src/ncsa.h \
+	src/smtp.cpp src/smtp.h \
 	src/ball.cpp src/ball.h \
 	src/core/bounds.h \
 	src/core/camera.cpp src/core/camera.h \
@@ -33,7 +34,7 @@ logstalgia_SOURCES = \
 	src/summarizer.cpp src/summarizer.h \
 	src/textarea.cpp src/textarea.h
 
-CPPFLAGS = -DSDLAPP_RESOURCE_DIR=\"$(pkgdatadir)\"
+CPPFLAGS = -g -DSDLAPP_RESOURCE_DIR=\"$(pkgdatadir)\"
 
 dist_pkgdata_DATA = data/ball.tga data/example.log data/glow.tga
 

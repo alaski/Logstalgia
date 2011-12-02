@@ -30,6 +30,7 @@
 #include "core/seeklog.h"
 
 #include "ncsa.h"
+#include "smtp.h"
 #include "custom.h"
 #include "logentry.h"
 #include "paddle.h"

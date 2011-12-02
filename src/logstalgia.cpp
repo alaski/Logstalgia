@@ -569,6 +569,16 @@ void Logstalgia::readLog(int buffer_rows) {
                 }
             }
 
+			if(accesslog==0) {
+				//is this an smtp log?
+				SMTPLog* smtplog = new SMTPLog();
+				if((parsed_entry = smtplog->parseLine(linestr, le))) {
+					accesslog = smtplog;
+				} else {
+					delete smtplog;
+				}
+			}
+
         } else {
 
             if(!(parsed_entry = accesslog->parseLine(linestr, le))) {
