@@ -34,7 +34,7 @@ logstalgia_SOURCES = \
 	src/summarizer.cpp src/summarizer.h \
 	src/textarea.cpp src/textarea.h
 
-CPPFLAGS = -g -DSDLAPP_RESOURCE_DIR=\"$(pkgdatadir)\"
+CPPFLAGS = -DSDLAPP_RESOURCE_DIR=\"$(pkgdatadir)\"
 
 dist_pkgdata_DATA = data/ball.tga data/example.log data/glow.tga
 

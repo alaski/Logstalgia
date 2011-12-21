@@ -664,16 +664,16 @@ void Logstalgia::init() {
     readLog();
 
     //add default groups
-    if(summGroups.size()==0) {
-        //images - file is under images or
-        addGroup("CSS", "\\.css\\b", 15);
-        addGroup("Script", "\\.js\\b", 15);
-        addGroup("Images", "/images/|\\.(jpe?g|gif|bmp|tga|ico|png)\\b", 20);
-    }
+    //if(summGroups.size()==0) {
+    //    //images - file is under images or
+    //    addGroup("CSS", "\\.css\\b", 15);
+    //    addGroup("Script", "\\.js\\b", 15);
+    //    addGroup("Images", "/images/|\\.(jpe?g|gif|bmp|tga|ico|png)\\b", 20);
+    //}
 
     //always fill remaining space with Misc, (if there is some)
     if(remaining_space>50) {
-        addGroup(summGroups.size()>0 ? "Misc" : "", ".*");
+        addGroup(summGroups.size()>0 ? "Recipient" : "", ".*");
     }
 
     SDL_ShowCursor(false);
